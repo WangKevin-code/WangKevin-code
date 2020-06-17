@@ -1,4 +1,4 @@
-$("body").parent().css("overflow-y","hidden");
+//$("body").parent().css("overflow-y","hidden");
 
 $("#content1").click(function(){
   //alert("Hello! I am an alert box!");
