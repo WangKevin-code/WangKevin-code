@@ -18,6 +18,10 @@
       
     }
 
+    body::-webkit-scrollbar{
+      display: none;
+    }
+
     .bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
@@ -36,6 +40,9 @@
     .modal-body {
       max-height: calc(100vh);
       overflow-y: auto;
+    }
+    .modal-body::-webkit-scrollbar {
+      display: none;
     }
     
   </style>
@@ -75,69 +82,76 @@
     <main role="main">
       <div class="container-fluid ">
         <div class="row text-center"> 
-          <div class="py-5 bg-info col-sm-3">
+          <div class="py-5 bg-info col-sm-3 modal-body" >
             <img src="./img/people.jpg" class="w-100 p-3" style="border-radius:50%" alt="">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link" id="content1">content1</a>
+                <h4 class="nav-link font-weight-bold" id="content1">關於我 ABOUT ME</h4>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="content2">content2</a>
+                <h4 class="nav-link font-weight-bold" id="content2">經歷 EXPERIENCE</h4>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="content3">content3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="content4">content4</a>
+                <h4 class="nav-link font-weight-bold" id="content3">使用過的工具 SKILL</h4>
               </li>
             </ul>
           </div>
   
-          <div class="py-5 bg-warning col-sm-9 modal-body" id="div2">
-            <h1 id="test1" style="display:none">example1</h1>
-            <h1 id="test2" style="display:none">example2</h1>
-            <h1 id="test3" style="display:none">example3</h1>
-            <h1 id="test4" style="display:none">example4</h1>
-           <h1 id="test1" >example1</h1>
-            <h1 id="test2" >example2</h1>
-            <h1 id="test3" >example3</h1>
-            <h1 id="test4" >example4</h1>
-            <h1 id="test1" >example1</h1>
-            <h1 id="test2" >example2</h1>
-            <h1 id="test3" >example3</h1>
-            <h1 id="test4" >example4</h1>
-            <h1 id="test1" >example1</h1>
-            <h1 id="test2" >example2</h1>
-            <h1 id="test3" >example3</h1>
-            <h1 id="test4" >example4</h1>
-            <h1 id="test1" >example1</h1>
-            <h1 id="test2" >example2</h1>
-            <h1 id="test3" >example3</h1>
-            <h1 id="test4" >example4</h1>
-            <h1 id="test1" >example1</h1>
-            <h1 id="test2" >example2</h1>
-            <h1 id="test3" >example3</h1>
-            <h1 id="test4" >example4</h1>
-            <h1 id="test1" >example1</h1>
-            <h1 id="test2" >example2</h1>
-            <h1 id="test3" >example3</h1>
-            <h1 id="test4" >example4</h1>
+          <div class="py-5 bg-warning col-sm-9 modal-body" id="div0">
+            <div class="card text-left bg-warning h-100 " style="width:auto;" id="div1">
+              <div class="card-body">
+                
+                <h1 class="card-title font-weight-bold" style="font-size: 10vh;">關於我 ABOUT ME</h1>
+                <br>
+                <p class="card-text font-weight-bold">1998年出生，目前居住台中市北屯區。</p>
+                <p class="card-text font-weight-bold">平時閒暇時，喜歡健身運動、旅遊，個性積極努力、隨和有禮。</p>
+                <p class="card-text font-weight-bold">在大學期間製作專題題目為「加解密結合智慧卡之應用」(以網頁呈現)，所使用到的工具有java card、PHP、HTML、jQuery、Bootstrap、phpMyAdmin。我所負責的部分為網頁前端的撰寫、資料的傳輸與java card的製作，從專題中我學習到了HTML+CSS+JavaScrip結合PHP的網頁程式撰寫、AJAX技術、初步的SQL指令、團隊合作以及自學研究java card的製作方式。</p>
+                <p class="card-text font-weight-bold">由於平時表現良好以及通過學校專題成果發表，因此藉由專題指導老師的推薦下，很幸運地在大學三年級上學期獲得在老師朋友公司實習的機會。在實習期間我所使用的工具有ASP.NET MVC、Window Form、MS SQL、Visual Studio、C#，實習內容主要在製作簡易的UI介面與資料的呈現。</p>
+              </div>
+            </div>
+
+            <div class="card text-center bg-warning" style="width:auto;" id="div2">
+              <div class="card-body" >
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <h1>example2</h1>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+
+            <div class="card text-center bg-warning" style="width:auto;" id="div3">
+              <div class="card-body">
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+              <h1>example3</h1>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+
+            
           </div>
   
         </div>
       </div>
      
     </main>
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Name : 王玟翔</p>
-        <p>Cell phone : 0916486385</p>
-        <p>Email : kevin22413180@gmail.com</p>
-      </div>
-    </footer>
+    
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
