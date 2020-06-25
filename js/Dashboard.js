@@ -24,11 +24,11 @@ var columns = [
 
 $.ajax({
   type: "GET",
-  url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-A149DF45-12F5-4ABF-954A-F00471BD0D59&offset=0&format=JSON&elementName=MaxT&timeFrom=2020-06-23T10%3A00%3A00&timeTo=2020-06-29T10%3A00%3A00",
-  
+  url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-A149DF45-12F5-4ABF-954A-F00471BD0D59&offset=0&format=JSON&elementName=MaxT",
   dataType: "json",
   success: function (response) {
     console.log(response);
+    console.log(response.records.locations[0].location[0].weatherElement[0].time[0].elementValue[0].value);
     for (i = 0; i < 22; i++) {
       for (j = 0; j < 11; j++) {
         var obj = new Object;
