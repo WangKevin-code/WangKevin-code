@@ -1,4 +1,10 @@
+//要抓出資料的陣列
 var testobj = [];
+var chartemperature =[];
+var charttime = [];
+//select陣列
+var selectlocation = [];
+//bootstrapTable格式
 var columns = [
   {
     field: 'location',
@@ -26,10 +32,12 @@ $.ajax({
   type: "GET",
   url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-A149DF45-12F5-4ABF-954A-F00471BD0D59&offset=0&format=JSON&elementName=MaxT",
   dataType: "json",
+  async:false,
   success: function (response) {
     console.log(response);
-    console.log(response.records.locations[0].location[0].weatherElement[0].time[0].elementValue[0].value);
     for (i = 0; i < 22; i++) {
+      //set location name
+      selectlocation.push(response.records.locations[0].location[i].locationName);
       for (j = 0; j < 11; j++) {
         var obj = new Object;
         obj.location = response.records.locations[0].location[i].locationName;
@@ -39,7 +47,7 @@ $.ajax({
         testobj.push(obj);
       }
     }
-    //console.log(testobj);
+    //console.log(chartemperature);
     $("#table").bootstrapTable({
       //url: 'js/data.json',
       search: true, //开启刷选
@@ -52,9 +60,15 @@ $.ajax({
       sortOrder: "desc",
       striped: true,              
     });
-  }
+  },
+  error: function(){
+    alert("資料傳輸錯誤");
+    window.location.href='./Dashboard.html';
+  },
 });
 
+
+//bootstrapTable溫度顏色顯示
 function degree(value, row, index) {
   if (value >= 30) {
     return {
@@ -81,4 +95,85 @@ function degree(value, row, index) {
 };
 
 
+//set select
+for (i = 0; i < selectlocation.length; i++) {
+  $("#location").append("<option value=" +selectlocation[i] +">" +selectlocation[i] +"</option>");
+}
+//抓出select選取值
+$("#location").change(function (e) { 
+  var loca =  $("#location").val(); 
+  chartemperature.length = 0;//清空陣列
+  charttime.length = 0;
+  for (let index = 0; index < testobj.length; index++) {
+    if (testobj[index].location == loca) {
+      chartemperature.push(testobj[index].temperature);
+      charttime.push(testobj[index].startTime);
+    }
+  }
+  charjs(chartemperature,charttime);
+  if(loca == "choice"){
+    $("#chartitle").text("Please "+loca);
+  }
+  else{
+    $("#chartitle").text(loca+"未來5日最高溫");
+  }
+  
+});
+
+
+$(document).ready(function (){
+  charjs(chartemperature,charttime);
+});
+
+function charjs(temperature,time) {
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: time,
+        datasets: [{
+            //label: '# of Votes',
+            data: temperature,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+  });
+}
 
