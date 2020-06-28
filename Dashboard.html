@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Bootstrap table CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
-    <!-- chartjs CSS -->
+    
     
     
     <title>Dashboard</title>
@@ -100,11 +100,12 @@
                     </div>
                   </div>
                 </div>
+                
                 <div class="card">
                   <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
                       <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        chart臺灣各縣市鄉鎮未來5天每12小時最高溫天氣預報
+                        bar chart臺灣各縣市鄉鎮未來5天每12小時最高溫天氣預報
                       </button>
                     </h5>
                   </div>
@@ -114,21 +115,26 @@
                         <option value="choice" selected>choice</option>
                       </select>
                       <h1 id="chartitle">choice</h1>
-                      <canvas id="myChart" width="400" height="400"></canvas>
+                      <canvas id="myChart" ></canvas>
                     </div>
                   </div>
                 </div>
+
                 <div class="card">
                   <div class="card-header" id="headingThree">
                     <h5 class="mb-0">
                       <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Collapsible Group Item #3
+                        line chart臺灣各縣市鄉鎮未來5天每12小時最高溫天氣預報
                       </button>
                     </h5>
                   </div>
                   <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      <select id="location2">
+                        <option value="choice" selected>choice</option>
+                      </select>
+                      <h1 id="linechartitle">choice</h1>
+                      <canvas id="lineChart" ></canvas>
                     </div>
                   </div>
                 </div>
