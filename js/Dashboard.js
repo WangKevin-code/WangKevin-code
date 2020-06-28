@@ -96,10 +96,17 @@ function degree(value, row, index) {
 
 
 //set select
+//bar chart
 for (i = 0; i < selectlocation.length; i++) {
   $("#location").append("<option value=" +selectlocation[i] +">" +selectlocation[i] +"</option>");
 }
+//line chart
+for (i = 0; i < selectlocation.length; i++) {
+  $("#location2").append("<option value=" +selectlocation[i] +">" +selectlocation[i] +"</option>");
+}
+
 //抓出select選取值
+//bar chart
 $("#location").change(function (e) { 
   var loca =  $("#location").val(); 
   chartemperature.length = 0;//清空陣列
@@ -110,29 +117,50 @@ $("#location").change(function (e) {
       charttime.push(testobj[index].startTime);
     }
   }
-  charjs(chartemperature,charttime);
+  barchar(chartemperature,charttime);
   if(loca == "choice"){
     $("#chartitle").text("Please "+loca);
   }
   else{
     $("#chartitle").text(loca+"未來5日最高溫");
   }
-  
+
 });
 
+//line chart
+$("#location2").change(function (e) { 
+  var loca =  $("#location2").val(); 
+  chartemperature.length = 0;//清空陣列
+  charttime.length = 0;
+  for (let index = 0; index < testobj.length; index++) {
+    if (testobj[index].location == loca) {
+      chartemperature.push(testobj[index].temperature);
+      charttime.push(testobj[index].startTime);
+    }
+  }
+  linechart(chartemperature,charttime);
+  if(loca == "choice"){
+    $("#linechartitle").text("Please "+loca);
+  }
+  else{
+    $("#linechartitle").text(loca+"未來5日最高溫");
+  }
+
+});
 
 $(document).ready(function (){
-  charjs(chartemperature,charttime);
+  barchar(chartemperature,charttime);
+  linechart(chartemperature,charttime);
 });
 
-function charjs(temperature,time) {
+function barchar(temperature,time) {
   var ctx = document.getElementById('myChart').getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: time,
         datasets: [{
-            //label: '# of Votes',
+            label: 'Max temperature',
             data: temperature,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -177,3 +205,47 @@ function charjs(temperature,time) {
   });
 }
 
+function linechart(temperature,time){
+  var ctx = document.getElementById('lineChart').getContext('2d');
+  var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: time,
+        datasets: [{
+            label: 'Max temperature',
+            data: temperature,
+            fill: true,
+            backgroundColor:'rgba(255, 99, 132, 0.2)',
+            borderColor:'rgba(255, 99, 132, 1)',
+            pointStyle: "circle",
+            pointBackgroundColor:'rgba(255, 99, 132, 0.2)',
+            pointRadius:5,
+            pointHoverRadius:10,
+        }]
+    },
+    options: {
+        responsive: true,
+        /*title:{
+          display: true,
+          fontSize: 26,
+          text: "test",
+        },*/
+        tooltips:{
+          mode:"point",
+          intersect:'true',
+        },
+        legend:{
+          position: "bottom",
+          labels:{
+            fontColor: 'black',
+          }
+        },
+        scales: {
+          yAxes: [{
+              stacked: true
+          }]
+        }
+    }
+  });
+
+}
