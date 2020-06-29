@@ -34,7 +34,7 @@ $.ajax({
   dataType: "json",
   async:false,
   success: function (response) {
-    console.log(response);
+    //console.log(response);
     for (i = 0; i < 22; i++) {
       //set location name
       selectlocation.push(response.records.locations[0].location[i].locationName);
@@ -151,6 +151,11 @@ $("#location2").change(function (e) {
 $(document).ready(function (){
   barchar(chartemperature,charttime);
   linechart(chartemperature,charttime);
+});
+
+$(".dataclear").click(function (e) { 
+  chartemperature.length = 0;//清空陣列
+  charttime.length = 0;
 });
 
 function barchar(temperature,time) {
