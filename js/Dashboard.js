@@ -151,11 +151,14 @@ $("#location2").change(function (e) {
 $(document).ready(function (){
   barchar(chartemperature,charttime);
   linechart(chartemperature,charttime);
+  
 });
 
 $(".dataclear").click(function (e) { 
   chartemperature.length = 0;//清空陣列
   charttime.length = 0;
+  $("#chartitle").text("Please choice");
+  $("#linechartitle").text("Please choice");
 });
 
 function barchar(temperature,time) {
