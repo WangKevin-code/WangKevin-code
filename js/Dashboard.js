@@ -28,6 +28,8 @@ var columns = [
   }, 
 ];
 
+
+
 $.ajax({
   type: "GET",
   url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-A149DF45-12F5-4ABF-954A-F00471BD0D59&offset=0&format=JSON&elementName=MaxT",
@@ -50,6 +52,9 @@ $.ajax({
     //console.log(chartemperature);
     $("#table").bootstrapTable({
       //url: 'js/data.json',
+      toolbar:'#toolbar',
+      //showRefresh: true,
+      showColumns: true,
       search: true, //开启刷选
       columns: columns,
       data: testobj,
@@ -58,8 +63,10 @@ $.ajax({
       pageSize:10,
       pageList:"[10, 20, 50, 200]",
       sortOrder: "desc",
-      striped: true,              
+      striped: true,             
     });
+
+    
   },
   error: function(){
     alert("資料傳輸錯誤");
@@ -151,7 +158,6 @@ $("#location2").change(function (e) {
 $(document).ready(function (){
   barchar(chartemperature,charttime);
   linechart(chartemperature,charttime);
-  
 });
 
 $(".dataclear").click(function (e) { 
