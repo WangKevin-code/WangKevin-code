@@ -36,5 +36,48 @@ $("#showcheckbox").click(function (e) {
 });
 
 $(document).on('input change',"#formControlRange", function () {
-    $('#range_value').html('Input range is '+ $(this).val() );
+    $('#range_value').html('Input value is '+ $(this).val());
+});
+
+$(document).on('input change',"#ageRange", function () {
+    $('#age').html('Age is '+ $(this).val());
+});
+
+$("#form2send").click(function () { 
+    var checkval = 0;
+    
+    $("input.form2").each(function(){
+        if($(this).val() == ""){
+            $(this).removeClass("is-valid");
+            $(this).addClass("is-invalid");
+            checkval++;
+        }
+        else{
+            $(this).removeClass("is-invalid");
+            $(this).addClass("is-valid");
+        }
+    });
+    
+    if($("#CitySelect").val()==0){
+        $("#CitySelect").removeClass("is-valid");
+        $("#CitySelect").addClass("is-invalid");
+        checkval++;
+    }
+    else{
+        $("#CitySelect").removeClass("is-invalid");
+        $("#CitySelect").addClass("is-valid");
+    }
+
+    if (checkval == 0 && $("#gridCheck").prop('checked') == true) {
+        swal("填寫完畢!", "已送出", "success");
+    }
+    else{
+        swal("還未填寫完畢!", "請確認填寫資料", "error");
+        $("#gridCheck").addClass("is-invalid");
+    }
+    
+});
+
+$(document).ready(function () {
+    
 });
