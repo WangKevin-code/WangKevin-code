@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Vue_calculator</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Font awesome CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body{
+          font-family: sans-serif, "微軟正黑體";
+          padding: 0; margin: 0;
+        }
+    
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+    
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+        .jumbotron{
+          background: url('./img/office2.jpg') no-repeat center center;
+          background-size: cover;
+          padding-top: 20%;
+          padding-bottom: 20%;
+        }
+        
+        
+      </style>
+    <body>
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-8 col-md-7 py-4">
+                    <!--<h4 class="text-white">About</h4>
+                    <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+                    -->
+                  </div>
+                  <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                      <li><span class="text-white">Name : 王玟翔</span></li>
+                      <li><span class="text-white">Cellphone : 0916486385</span></li>
+                      <li><span class="text-white">Email : kevin22413180@gmail.com</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
+              <div class="container d-flex justify-content-between">
+                <a href="./index.html" class="navbar-brand d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  <strong>Home</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </div>
+        </header>
+        <main role="main">
+            <div class="album py-5 bg-light">
+                <!-- Vue實例的掛載點 -->
+                <div id="app">
+                    <div class="container mt-3">
+                        <div class="alert alert-primary">
+                            <h1>計數</h1>
+                            <h2 class="">
+                                {{number}}
+                            </h2>
+
+                            <div>
+                                <button class="btn btn-success" @click='add'>+{{btn_number}}</button>
+                                <button class="btn btn-danger" @click='Subtract'>-{{btn_number}}</button>
+                                <button class="btn btn-warning" @click='reset'>Reset</button>
+                            </div>
+                        
+                            <div class="input-group mt-1 w-50 ">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text">輸入想增加或減少的數目</span>
+                                </div>
+                                <input type="text" class="form-control" v-model='btn_number'> 
+                            </div>
+                        </div>
+                        <div class="alert alert-dark">
+                            <h1>計算機</h1>
+                            <h2 class="">
+                                {{calaulator_number}}
+                            </h2>
+                            <div class="row text-center">
+                                <div class="btn btn-outline-secondary col" v-for="n in 3" @click='input_number(n+6)'>{{n+6}}</div>
+                                <div class="btn btn-outline-secondary col" @click='calaulator_add'>+</div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="btn btn-outline-secondary col" v-for="n in 3" @click='input_number(n+3)'>{{n+3}}</div>
+                                <div class="btn btn-outline-secondary col" @click='calaulator_subtract'>-</div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="btn btn-outline-secondary col" v-for="n in 3" @click='input_number(n)'>{{n}}</div>
+                                <div class="btn btn-outline-secondary col" @click='calaulator_multiplicate'>*</div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="btn btn-outline-secondary col-3" @click='calaulator_clear'>Clear</div>
+                                <div class="btn btn-outline-secondary col-3" @click='input_number(0)'>0</div>
+                                <div class="btn btn-outline-secondary col-3" @click='equal'>=</div>
+                                <div class="btn btn-outline-secondary col-3" @click='calaulator_division'>/</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------->
+            </div>
+        </main>
+        
+        <footer class="text-muted">
+            <div class="container">
+              <p class="float-right">
+                <a href="#">Back to top</a>
+              </p>
+              <p>Name : 王玟翔</p>
+              <p>Cell phone : 0916486385</p>
+              <p>Email : kevin22413180@gmail.com</p>
+            </div>
+        </footer>      
+    </body>
+
+</html>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Vue CDN -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="./js/Vue_calculator.js"></script>
