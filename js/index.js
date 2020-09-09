@@ -7,3 +7,6 @@ $("#Dashboard").click(function () {
 $("#Form").click(function () { 
     window.location.href='./Form.html';
 });
+$("#Calculator").click(function () { 
+    window.location.href='./Vue_calculator.html';
+});
