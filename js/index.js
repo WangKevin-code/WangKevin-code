@@ -10,3 +10,6 @@ $("#Form").click(function () {
 $("#Calculator").click(function () { 
     window.location.href='./Vue_calculator.html';
 });
+$("#TodoList").click(function () { 
+    window.location.href='./Vue_todo_list.html';
+});
