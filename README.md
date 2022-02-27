@@ -1,8 +1,8 @@
 ### Hey guys~ 👋
-🌱 I’m currently learning C# ASP.NET framwork and .NET <br/>
+🌱 I’m currently learning C# ASP.NET framwork and .NET series. <br/>
 This is my github page profile. <br/>
 https://wangkevin-code.github.io/WangKevin-code/index.html <br/>
-I will update the information from time to time. <br/>
+I will update the information from time to time occasionally. <br/>
 Have nice day~
 
 正在學習C# ASP.NET framwork 與 .NET系列的菜鳥工程師。<br/>
