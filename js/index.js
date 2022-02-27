@@ -1,6 +1,9 @@
 $("#Resume").click(function () { 
     window.location.href='./Resume.html';
 });
+$("#DataTransfer").click(function () { 
+    window.location.href='https://github.com/WangKevin-code/SQLBroker';
+});
 $("#Dashboard").click(function () { 
     window.location.href='./Dashboard.html';
 });
