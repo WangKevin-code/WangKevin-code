@@ -31,6 +31,9 @@ const VueApp = {
                 let count = LocationWeatherData.location.length;
                 for (let i = 0; i < count; i++) {
                     let NowWeatherData = LocationWeatherData.location[i].weatherElement[0].time.find(x => new Date(x.startTime) < new Date() && new Date(x.endTime) > new Date());
+                    if (NowWeatherData == null) {
+                        NowWeatherData = LocationWeatherData.location[i].weatherElement[0].time[0];
+                    }
                     let data = new Object;
                     data.locationName = LocationWeatherData.location[i].locationName;
                     data.temperature = NowWeatherData.elementValue[0].value;
