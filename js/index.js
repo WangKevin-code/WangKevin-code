@@ -1,18 +1,21 @@
-$("#Resume").click(function () { 
-    window.location.href='./Resume.html';
+$("#Resume").click(function () {
+    window.location.href = './Resume.html';
 });
-$("#DataTransfer").click(function () { 
-    window.location.href='https://github.com/WangKevin-code/SQLBroker';
+$("#DataTransfer").click(function () {
+    window.location.href = 'https://github.com/WangKevin-code/SQLBroker';
 });
-$("#Dashboard").click(function () { 
-    window.location.href='./Dashboard.html';
+$("#Dashboard").click(function () {
+    window.location.href = './Dashboard.html';
 });
-$("#Form").click(function () { 
-    window.location.href='./Form.html';
+$("#WeatherBaord").click(function () {
+    window.location.href = './InformationBoard.html';
 });
-$("#Calculator").click(function () { 
-    window.location.href='./Vue_calculator.html';
+$("#Form").click(function () {
+    window.location.href = './Form.html';
 });
-$("#TodoList").click(function () { 
-    window.location.href='./Vue_todo_list.html';
+$("#Calculator").click(function () {
+    window.location.href = './Vue_calculator.html';
+});
+$("#TodoList").click(function () {
+    window.location.href = './Vue_todo_list.html';
 });
