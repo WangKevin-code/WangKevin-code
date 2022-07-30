@@ -3,7 +3,13 @@ const VueApp = {
         return {
             message: 'Hello Vue.js!',
             WeatherDatas: [],
-            Title: '臺灣各縣市每12小時最高溫'
+            Title: '臺灣各縣市每12小時最高溫',
+            TemperatureToHigh: 31,
+            TemperatureToLow: 10,
+            test: true,
+            CardBodyClass: "card-body",
+            RedText: "text-danger",
+            BlueTest: "text-info",
         }
     },
     methods: {
@@ -21,9 +27,22 @@ const VueApp = {
 
     },
     computed: {
-
+        HighTemperatureCount() {
+            if (this.WeatherDatas.length > 0) {
+                // console.log(this.WeatherDatas.filter(x => x.temperature > this.TemperatureToHigh).length);
+                return this.WeatherDatas.filter(x => x.temperature > this.TemperatureToHigh).length;
+            }
+            return 0;
+        },
+        LowTemperatureCount() {
+            if (this.WeatherDatas.length > 0) {
+                // console.log(this.WeatherDatas.filter(x => x.temperature < this.TemperatureToLow).length);
+                return this.WeatherDatas.filter(x => x.temperature < this.TemperatureToLow).length;
+            }
+            return 0;
+        },
     },
-    mounted() {
+    mounted() { //mounted() => 頁面渲染後載入
         axios
             .get('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-A149DF45-12F5-4ABF-954A-F00471BD0D59&offset=0&format=JSON&elementName=MaxT')
             .then((response) => { // 请求失败处理

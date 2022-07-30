@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Vue3_practice</title>
+    <title>Weather Information Board</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -87,10 +87,24 @@
             <div class="container mt-3">
                 <div id="InfoBoards">
                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-danger" role="alert">
+                                <h1>已有{{HighTemperatureCount}}個縣市超過{{TemperatureToHigh}}度高溫</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-primary" role="alert">
+                                <h1>已有{{LowTemperatureCount}}個縣市低於{{TemperatureToLow}}度低溫</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <div class="col-md-4" v-for="data in WeatherDatas">
                             <div class="card mb-4 shadow-sm">
                                 <!-- <img src="./img/DataTransfer.jpg" class="card-img-top" width="100%" height="225" alt=""> -->
-                                <div class="card-body">
+                                <div
+                                    v-bind:class="[data.temperature > TemperatureToHigh ? RedText : '', TemperatureToLow > data.temperature ? BlueTest : '', CardBodyClass]">
                                     <h5 class="card-title">{{data.locationName}}</h5>
                                     <p class="card-text">{{data.startTime}} ~ {{data.endTime}}</p>
                                     <p class="card-text">{{data.measures}} : {{data.temperature}}</p>
