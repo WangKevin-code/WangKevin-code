@@ -10,6 +10,7 @@ const VueApp = {
             CardBodyClass: "card-body",
             RedText: "text-danger",
             BlueTest: "text-info",
+            Img: "temperature.jpg"
         }
     },
     methods: {
