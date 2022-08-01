@@ -48,6 +48,21 @@ const APP1 = {
         add() {
             this.author.books.push("Vue 5 - The Mystery");
         },
+        test() {
+            //無法使用ref方式取得子元素
+            //console.log(this.$refs.box.getBoundingClientRect());
+            //無法取得document.getElementById("test")
+            //console.log(document.getElementById("test").getBoundingClientRect());
+
+            if (document.getElementById("test") != null) {
+                console.log(document.getElementById("test").getBoundingClientRect());
+            }
+            else {
+                console.log(document.getElementById("test"));
+            }
+            //第一次無法取得
+            return $("#test").attr("style");
+        }
     },
     components: {
         Todo, // 注册一个新组件
@@ -68,12 +83,15 @@ const APP1 = {
                 this.firstName = names[0]
                 this.lastName = names[names.length - 1]
             }
-        }
+        },
+
     },
     mounted() {
         setInterval(() => {
             this.counter++
-        }, 1000)
+        }, 1000);
+
+        console.log($("#test").attr("style"));
     }
 }
 
