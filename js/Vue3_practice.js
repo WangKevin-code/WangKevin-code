@@ -100,3 +100,13 @@ const vm = Vue.createApp(APP1).mount('#VueTest');
 vm.counter = 5;
 console.log(vm.counter);
 
+//一般
+// $("[statue = 1]").filter(function () {
+//     return this.attributes["differ"].value > 10;
+// }).addClass("greenText").removeClass("redText");
+
+//lambda
+$("[statue = " + 3 + "]")
+    .filter((x, i) => i.attributes["differ"].value > 11)
+    .addClass("greenText")
+    .removeClass("redText");
