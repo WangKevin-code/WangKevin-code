@@ -45,7 +45,7 @@ const VueApp = {
     },
     mounted() { //mounted() => 頁面渲染後載入
         axios
-            .get('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-A149DF45-12F5-4ABF-954A-F00471BD0D59&offset=0&format=JSON&elementName=MaxT')
+            .get('/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-A149DF45-12F5-4ABF-954A-F00471BD0D59&offset=0&format=JSON&elementName=MaxT')
             .then((response) => { // 请求失败处理
                 let LocationWeatherData = response.data.records.locations[0];
                 let count = LocationWeatherData.location.length;
@@ -68,6 +68,6 @@ const VueApp = {
             });
     }
 }
-
+axios.defaults.baseURL = 'https://opendata.cwb.gov.tw';
 
 const vm = Vue.createApp(VueApp).mount('#InfoBoards');
