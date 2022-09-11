@@ -68,6 +68,8 @@ const VueApp = {
             });
     }
 }
+
+//Global paramter setting for axios
 axios.defaults.baseURL = 'https://opendata.cwb.gov.tw';
 
 const vm = Vue.createApp(VueApp).mount('#InfoBoards');
