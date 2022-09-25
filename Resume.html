@@ -1,158 +1,179 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-   
-    <title>My Resume!</title>
-  </head>
-  <style>
-    body{
-      font-family: sans-serif, "微軟正黑體";
-      padding: 0; 
-      margin: 0;
-      
-    }
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    body::-webkit-scrollbar{
-      display: none;
-    }
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+  <title>My Resume!</title>
+</head>
+<style>
+  body {
+    font-family: sans-serif, "微軟正黑體";
+    padding: 0;
+    margin: 0;
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
+  }
 
-    .modal-body {
-      max-height: calc(100vh);
-      overflow-y: auto;
-    }
-    .modal-body::-webkit-scrollbar {
-      display: none;
-    }
-    
-  </style>
+  body::-webkit-scrollbar {
+    display: none;
+  }
 
-  <body>
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <!--<h4 class="text-white">About</h4>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .modal-body {
+    max-height: calc(100vh);
+    overflow-y: auto;
+  }
+
+  .modal-body::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<body>
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <!--<h4 class="text-white">About</h4>
               <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
               -->
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><span class="text-white">Name : 王玟翔</span></li>
-                <li><span class="text-white">Cellphone : 0916486385</span></li>
-                <li><span class="text-white">Email : kevin22413180@gmail.com</span></li>
-              </ul>
-            </div>
           </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
-        <div class="container d-flex justify-content-between">
-          <a href="./index.html" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-            <strong>Home</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <main role="main">
-      <div class="container-fluid ">
-        <div class="row text-center"> 
-          <div class="py-5 bg-info col-sm-3 modal-body" >
-            <img src="./img/people.jpg" class="w-100 p-3" style="border-radius:50%" alt="">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <h4 class="nav-link font-weight-bold" id="content1">關於我 ABOUT ME</h4>
-              </li>
-              <li class="nav-item">
-                <h4 class="nav-link font-weight-bold" id="content2">經歷 EXPERIENCE</h4>
-              </li>
-              <li class="nav-item">
-                <h4 class="nav-link font-weight-bold" id="content3">使用過的工具 SKILL</h4>
-              </li>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><span class="text-white">Name : 王玟翔</span></li>
+              <li><span class="text-white">Cellphone : 0916486385</span></li>
+              <li><span class="text-white">Email : kevin22413180@gmail.com</span></li>
             </ul>
           </div>
-  
-          <div class="py-5 bg-warning col-sm-9 modal-body" id="div0">
-            <div class="card text-left bg-warning" style="width:auto; height: auto;" id="div1">
-              <div class="card-body">
-                <h1 class="card-title font-weight-bold font-italic" style="font-size: 8vh;">關於我  ABOUT ME</h1>
-                <p class="card-text font-weight-bold">1998年出生，目前居住台中市北屯區。</p>
-                <p class="card-text font-weight-bold">平時閒暇時，喜歡健身運動、旅遊，個性積極努力、隨和有禮。</p>
-                <p class="card-text font-weight-bold">在大學期間製作專題題目為「加解密結合智慧卡之應用」(以網頁呈現)，所使用到的工具有java card、PHP、HTML、jQuery、Bootstrap、phpMyAdmin。我所負責的部分為網頁前端的撰寫、資料的傳輸與java card的製作，從專題中我學習到了HTML+CSS+JavaScrip結合PHP的網頁程式撰寫、AJAX技術、初步的SQL指令、團隊合作以及自學研究java card的製作方式。</p>
-                <p class="card-text font-weight-bold">由於平時表現良好以及通過學校專題成果發表，因此藉由專題指導老師的推薦下，很幸運地在大學四年級上學期獲得在老師朋友公司實習的機會。在實習期間我所使用的工具有ASP.NET MVC、Window Form、MS SQL、Visual Studio、C#，實習內容主要在製作簡易的UI介面與資料的呈現。</p>
-                <p class="card-text font-weight-bold">參與過政府單位官網系統的專案維護，維護期間中主要為駐點維護協助現場系統問題排除、舊網站系統的資料搬移、新建區處子站台上線、依照問題單修改/新增功能、滲透測試弱點修正、原碼掃描弱點修正。</p>
-              </div>
-            </div>
-
-            <div class="card text-left bg-warning" style="width:auto;" id="div2">
-              <div class="card-body" >
-                <h1 class="card-title font-weight-bold font-italic" style="font-size: 8vh;">經歷 EXPERIENCE</h1>
-                <br>
-                <h2 class="card-text font-weight-bold font-italic">經歷1</h2>
-                <p class="card-text font-weight-bold">擔任ASP.NET MVC 台水官網駐點工程師</p>
-                <br>
-                <h2 class="card-text font-weight-bold font-italic">實習 Internship</h2>
-                <p class="card-text font-weight-bold">大學四年級上學期曾在數位商策擔任實習助理工程師</p>
-                <br>
-                <h2 class="card-text font-weight-bold font-italic">學歷 Education</h2>
-                <p class="card-text font-weight-bold">畢業於國立勤益科技大學(2016~2020)</p>
-                <p class="card-text font-weight-bold">資訊工程學系</p>
-              </div>
-            </div>
-
-            <div class="card text-left bg-warning" style="width:auto;" id="div3">
-              <div class="card-body">
-                <h1 class="card-title font-weight-bold font-italic" style="font-size: 8vh;">使用過的工具 SKILL</h1>
-                <br>
-                <h2 class="card-text font-weight-bold font-italic">網頁開發</h2>
-                <p class="card-text font-weight-bold">使用過Bootstrap3,4、JavaScript、jQuery、Html、CSS、ASP.NET MVC架構、PHP、MySQL、MS SQL、phpMyAdmin</p>
-                <br>
-                <h2 class="card-text font-weight-bold font-italic">介面開發</h2>
-                <p class="card-text font-weight-bold">使用過Window Form、Visual Studio</p>
-              </div>
-            </div>
-
-            
-          </div>
-  
         </div>
       </div>
-     
-    </main>
-    
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
+      <div class="container d-flex justify-content-between">
+        <a href="./index.html" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+            viewBox="0 0 24 24" focusable="false">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+            <circle cx="12" cy="13" r="4" />
+          </svg>
+          <strong>Home</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main role="main">
+    <div class="container-fluid ">
+      <div class="row text-center">
+        <div class="py-5 bg-info col-sm-3 modal-body">
+          <img src="./img/people.jpg" class="w-100 p-3" style="border-radius:50%" alt="">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <h4 class="nav-link font-weight-bold" id="content1">關於我 ABOUT ME</h4>
+            </li>
+            <li class="nav-item">
+              <h4 class="nav-link font-weight-bold" id="content2">經歷 EXPERIENCE</h4>
+            </li>
+            <li class="nav-item">
+              <h4 class="nav-link font-weight-bold" id="content3">使用過的工具 SKILL</h4>
+            </li>
+          </ul>
+        </div>
+
+        <div class="py-5 bg-warning col-sm-9 modal-body" id="div0">
+          <div class="card text-left bg-warning" style="width:auto; height: auto;" id="div1">
+            <div class="card-body">
+              <h1 class="card-title font-weight-bold font-italic" style="font-size: 8vh;">關於我 ABOUT ME</h1>
+              <p class="card-text font-weight-bold">1998年出生，目前居住台中市北屯區。</p>
+              <p class="card-text font-weight-bold">平時閒暇時，喜歡健身運動、旅遊，個性積極努力、隨和有禮。</p>
+              <p class="card-text font-weight-bold">在大學期間製作專題題目為「加解密結合智慧卡之應用」(以網頁呈現)，所使用到的工具有java
+                card、PHP、HTML、jQuery、Bootstrap、phpMyAdmin。我所負責的部分為網頁前端的撰寫、資料的傳輸與java
+                card的製作，從專題中我學習到了HTML+CSS+JavaScrip結合PHP的網頁程式撰寫、AJAX技術、初步的SQL指令、團隊合作以及自學研究java card的製作方式。</p>
+              <p class="card-text font-weight-bold">
+                由於平時表現良好以及通過學校專題成果發表，因此藉由專題指導老師的推薦下，很幸運地在大學四年級上學期獲得在老師朋友公司實習的機會。在實習期間我所使用的工具有ASP.NET MVC、Window Form、MS
+                SQL、Visual Studio、C#，實習內容主要在製作簡易的UI介面與資料的呈現。</p>
+              <p class="card-text font-weight-bold">
+                參與過政府單位官網系統的專案維護，維護期間中主要為駐點維護協助現場系統問題排除、舊網站系統的資料搬移、新建區處子站台上線、依照問題單修改/新增功能、滲透測試弱點修正、原碼掃描弱點修正。</p>
+            </div>
+          </div>
+
+          <div class="card text-left bg-warning" style="width:auto;" id="div2">
+            <div class="card-body">
+              <h1 class="card-title font-weight-bold font-italic" style="font-size: 8vh;">經歷 EXPERIENCE</h1>
+              <br>
+              <h2 class="card-text font-weight-bold font-italic">經歷1</h2>
+              <p class="card-text font-weight-bold">擔任ASP.NET MVC 台水官網駐點工程師</p>
+              <br>
+              <h2 class="card-text font-weight-bold font-italic">實習 Internship</h2>
+              <p class="card-text font-weight-bold">大學四年級上學期曾在數位商策擔任實習助理工程師</p>
+              <br>
+              <h2 class="card-text font-weight-bold font-italic">學歷 Education</h2>
+              <p class="card-text font-weight-bold">畢業於國立勤益科技大學(2016~2020)</p>
+              <p class="card-text font-weight-bold">資訊工程學系</p>
+            </div>
+          </div>
+
+          <div class="card text-left bg-warning" style="width:auto;" id="div3">
+            <div class="card-body">
+              <h1 class="card-title font-weight-bold font-italic" style="font-size: 8vh;">使用過的工具 SKILL</h1>
+              <br>
+              <h2 class="card-text font-weight-bold font-italic">網頁開發</h2>
+              <p class="card-text font-weight-bold">使用過Bootstrap3,4、JavaScript、jQuery、Html、CSS、ASP.NET
+                MVC架構、PHP、MySQL、MS SQL、phpMyAdmin</p>
+              <br>
+              <h2 class="card-text font-weight-bold font-italic">介面開發</h2>
+              <p class="card-text font-weight-bold">使用過Window Form、Visual Studio</p>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script type="text/javascript" src="./js/Resume.js"></script>

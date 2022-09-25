@@ -1,259 +1,279 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Form</title>
-  </head>
-  <style>
-    body{
-      font-family: sans-serif, "微軟正黑體";
-      padding: 0; margin: 0;
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <title>Form</title>
+</head>
+<style>
+  body {
+    font-family: sans-serif, "微軟正黑體";
+    padding: 0;
+    margin: 0;
+  }
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
+  }
 
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+  .jumbotron {
+    background: url('./img/office2.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+</style>
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-    .jumbotron{
-      background: url('./img/office2.jpg') no-repeat center center;
-      background-size: cover;
-      padding-top: 20%;
-      padding-bottom: 20%;
-    }
-    
-    
-  </style>
-
-  <body>
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <!--<h4 class="text-white">About</h4>
+<body>
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <!--<h4 class="text-white">About</h4>
               <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
               -->
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><span class="text-white">Name : 王玟翔</span></li>
-                <li><span class="text-white">Cellphone : 0916486385</span></li>
-                <li><span class="text-white">Email : kevin22413180@gmail.com</span></li>
-              </ul>
-            </div>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><span class="text-white">Name : 王玟翔</span></li>
+              <li><span class="text-white">Cellphone : 0916486385</span></li>
+              <li><span class="text-white">Email : kevin22413180@gmail.com</span></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
-        <div class="container d-flex justify-content-between">
-          <a href="./index.html" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-            <strong>Home</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
+      <div class="container d-flex justify-content-between">
+        <a href="./index.html" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+            viewBox="0 0 24 24" focusable="false">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+            <circle cx="12" cy="13" r="4" />
+          </svg>
+          <strong>Home</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-    </header>
-    <main role="main">
-        <div class="album py-5 bg-light">
-            <div class="container">
-                <br>
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="card-title font-weight-bold">Input Group</h1>
-                        <div class="form-group">
-                            <label class="font-weight-bold">Test Input</label>
-                            <input type="text" class="form-control" placeholder="Test Input" id="input1">
-                            <small class="form-text text-muted">Test Input</small>
-                            <br>
-                            <div class="input-group">
-                              <input type="text" class="form-control" placeholder="Test Input2" id="input2">
-                              <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" id="inputbtn2">Alert Test Input2</button>
-                              </div>
-                            </div>
-                            <br>
-                            <div class="input-group">
-                              <input type="text" class="form-control" placeholder="Test input3" id="input3">
-                              <div class="input-group-append">
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownbtn1">Dropdown</button>
-                                <div class="dropdown-menu" id="dropdown1">
-                                  <a class="dropdown-item" href="#">select1</a>
-                                  <a class="dropdown-item" href="#">select2</a>
-                                  <a class="dropdown-item" href="#">select3</a>
-                                  <div role="separator" class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">select4</a>
-                                </div>
-                              </div>
-                            </div>
-                            <br>
-                            <div class="input-group">
-                              <select class="custom-select" id="inputGroupSelect01">
-                                <option selected>Choose...</option>
-                                <option class="option" value="test1">test1</option>
-                                <option class="option" value="test2">test2</option>
-                                <option class="option" value="test3">test3</option>
-                              </select>
-                            </div>
-                            <br>
-                            <div class="form-check">
-                              <div class="row">
-                                <div class="col">
-                                  <input class="form-check-input" type="checkbox" value="checkbox1" id="defaultCheck1">
-                                  <label class="form-check-label" for="defaultCheck1">
-                                    checkbox1
-                                  </label>
-                                </div>
-                                <div class="col">
-                                  <input class="form-check-input" type="checkbox" value="checkbox2" id="defaultCheck2" checked>
-                                  <label class="form-check-label" for="defaultCheck2">
-                                    checkbox2
-                                  </label>
-                                </div>
-                                <div class="col">
-                                  <input class="form-check-input" type="checkbox" value="checkbox3" id="defaultCheck3" disabled>
-                                  <label class="form-check-label" for="defaultCheck3">
-                                    checkbox3
-                                  </label>
-                                </div>
-                                <div class="col">
-                                  <input class="form-check-input" type="checkbox" value="checkbox4" id="defaultCheck4" disabled checked>
-                                  <label class="form-check-label" for="defaultCheck4">
-                                    checkbox4
-                                  </label>
-                                </div>
-                              </div>
-
-                              <div class="row">
-                                <div class="col-3">
-                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="radio1" checked>
-                                  <label class="form-check-label" for="exampleRadios1">
-                                    radio1
-                                  </label>
-                                </div>
-                                <div class="col-3">
-                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="radio2">
-                                  <label class="form-check-label" for="exampleRadios2">
-                                    radio2
-                                  </label>
-                                </div>
-                                <div class="col-3">
-                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="radio3" disabled>
-                                  <label class="form-check-label" for="exampleRadios3">
-                                    radio3
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <br>
-                            <button type="button" class="btn btn-outline-success btn-sm" id="changecheckbox">switch checkbox</button>
-                            <button type="button" class="btn btn-outline-info btn-sm" id="showcheckbox">show checked items</button>
-                            
-                            <div class="form-group">
-                              <label class="font-weight-bold" for="formControlRange" id="range_value">Input range is 0~100</label>
-                              <input type="range" class="form-control-range" id="formControlRange" value="50">
-                            </div>
-                        </div>
-                    </div>
+    </div>
+  </header>
+  <main role="main">
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <br>
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title font-weight-bold">Input Group</h1>
+            <div class="form-group">
+              <label class="font-weight-bold">Test Input</label>
+              <input type="text" class="form-control" placeholder="Test Input" id="input1">
+              <small class="form-text text-muted">Test Input</small>
+              <br>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Test Input2" id="input2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="inputbtn2">Alert Test Input2</button>
                 </div>
-                <br>
-                <div class="card">
-                  <div class="card-body">
-                    <h1 class="card-title font-weight-bold">Practice</h1>
-                   
-                      <div class="form-row" >
-                        <div class="form-group col-md-6">
-                          <label for="Name">Name</label>
-                          <input type="text" class="form-control form2" id="Name" placeholder="ex:Kevin-Wang">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="Birthday">Birthday</label>
-                          <input type="text" class="form-control form2" id="Birthday" placeholder="ex:1999/01/01">
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputEmail4">Email</label>
-                          <input type="email" class="form-control form2" id="inputEmail4">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputPassword4">Password</label>
-                          <input type="password" class="form-control form2" id="inputPassword4">
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-8">
-                          <label for="inputAddress">Address</label>
-                          <input type="text" class="form-control form2" id="inputAddress" placeholder="1234 Main St">
-                        </div>
-                        <div class="form-group col-md-4">
-                          <label for="CitySelect">City</label>
-                          <select class="custom-select" id="CitySelect">
-                            <option selected value="0">Choose...</option>
-                            <option class="option" value="test1">Taipei</option>
-                            <option class="option" value="test2">Taichung</option>
-                            <option class="option" value="test3">Kaohsiung</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="font-weight-bold" for="ageRange" id="age">Age is 0</label>
-                        <input type="range" class="form-control-range form2" id="ageRange" value="0">
-                      </div>
-
-                      <div class="form-group">
-                        <div class="form-check">
-                          <input class="form-check-input form2" type="checkbox" id="gridCheck">
-                          <label class="form-check-label" for="gridCheck">
-                            Agree 
-                          </label>
-                        </div>
-                      </div>
-                      <button class="btn btn-outline-info" id="form2send">ok</button>
-                    
+              </div>
+              <br>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Test input3" id="input3">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" id="dropdownbtn1">Dropdown</button>
+                  <div class="dropdown-menu" id="dropdown1">
+                    <a class="dropdown-item" href="#">select1</a>
+                    <a class="dropdown-item" href="#">select2</a>
+                    <a class="dropdown-item" href="#">select3</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">select4</a>
                   </div>
                 </div>
-                
-            </div>
-        </div>
-    </main>
-    
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Name : 王玟翔</p>
-        <p>Cell phone : 0916486385</p>
-        <p>Email : kevin22413180@gmail.com</p>
-      </div>
-    </footer>
+              </div>
+              <br>
+              <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option class="option" value="test1">test1</option>
+                  <option class="option" value="test2">test2</option>
+                  <option class="option" value="test3">test3</option>
+                </select>
+              </div>
+              <br>
+              <div class="form-check">
+                <div class="row">
+                  <div class="col">
+                    <input class="form-check-input" type="checkbox" value="checkbox1" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      checkbox1
+                    </label>
+                  </div>
+                  <div class="col">
+                    <input class="form-check-input" type="checkbox" value="checkbox2" id="defaultCheck2" checked>
+                    <label class="form-check-label" for="defaultCheck2">
+                      checkbox2
+                    </label>
+                  </div>
+                  <div class="col">
+                    <input class="form-check-input" type="checkbox" value="checkbox3" id="defaultCheck3" disabled>
+                    <label class="form-check-label" for="defaultCheck3">
+                      checkbox3
+                    </label>
+                  </div>
+                  <div class="col">
+                    <input class="form-check-input" type="checkbox" value="checkbox4" id="defaultCheck4" disabled
+                      checked>
+                    <label class="form-check-label" for="defaultCheck4">
+                      checkbox4
+                    </label>
+                  </div>
+                </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+                <div class="row">
+                  <div class="col-3">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="radio1"
+                      checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                      radio1
+                    </label>
+                  </div>
+                  <div class="col-3">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                      value="radio2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      radio2
+                    </label>
+                  </div>
+                  <div class="col-3">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="radio3"
+                      disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                      radio3
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <button type="button" class="btn btn-outline-success btn-sm" id="changecheckbox">switch checkbox</button>
+              <button type="button" class="btn btn-outline-info btn-sm" id="showcheckbox">show checked items</button>
+
+              <div class="form-group">
+                <label class="font-weight-bold" for="formControlRange" id="range_value">Input range is 0~100</label>
+                <input type="range" class="form-control-range" id="formControlRange" value="50">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title font-weight-bold">Practice</h1>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control form2" id="Name" placeholder="ex:Kevin-Wang">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="Birthday">Birthday</label>
+                <input type="text" class="form-control form2" id="Birthday" placeholder="ex:1999/01/01">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control form2" id="inputEmail4">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control form2" id="inputPassword4">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-8">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control form2" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="CitySelect">City</label>
+                <select class="custom-select" id="CitySelect">
+                  <option selected value="0">Choose...</option>
+                  <option class="option" value="test1">Taipei</option>
+                  <option class="option" value="test2">Taichung</option>
+                  <option class="option" value="test3">Kaohsiung</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold" for="ageRange" id="age">Age is 0</label>
+              <input type="range" class="form-control-range form2" id="ageRange" value="0">
+            </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input form2" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Agree
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-outline-info" id="form2send">ok</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>Name : 王玟翔</p>
+      <p>Cell phone : 0916486385</p>
+      <p>Email : kevin22413180@gmail.com</p>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
 <!-- Sweet Alert -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
