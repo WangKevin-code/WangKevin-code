@@ -214,10 +214,10 @@ const VueApp = {
         //將資料顯示到彈出視窗
         ShowEditModal(locationName) {
             var row = $('#TableFromWeatherDatas').bootstrapTable('getRowByUniqueId', locationName);
-            vms.EditData.locationName = row.locationName;
-            vms.EditData.temperature = row.temperature;
-            vms.EditData.startTime = row.startTime;
-            vms.EditData.endTime = row.endTime;
+            this.EditData.locationName = row.locationName;
+            this.EditData.temperature = row.temperature;
+            this.EditData.startTime = row.startTime;
+            this.EditData.endTime = row.endTime;
         },
         //更新資料
         UpdateData() {
