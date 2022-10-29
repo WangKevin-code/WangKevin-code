@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>My Portfolio!</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif, "微軟正黑體";
+        padding: 0;
+        margin: 0;
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .jumbotron {
+        background: url('./img/office2.jpg') no-repeat center center;
+        background-size: cover;
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <!--<h4 class="text-white">About</h4>
+              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+              -->
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><span class="text-white">Name : 王玟翔</span></li>
+                            <li><span class="text-white">Cellphone : 0916486385</span></li>
+                            <li><span class="text-white">Email : kevin22413180@gmail.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
+            <div class="container d-flex justify-content-between">
+                <a href="./index.html" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                        viewBox="0 0 24 24" focusable="false">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                        <circle cx="12" cy="13" r="4" />
+                    </svg>
+                    <strong>Home</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <canvas id="myChart"></canvas>
+                                <button class="btn btn-danger" onclick="NewData()">test</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Name : 王玟翔</p>
+            <p>Cell phone : 0916486385</p>
+            <p>Email : kevin22413180@gmail.com</p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
+<script>
+    const data = {
+        labels: [
+            'Red',
+            'Blue',
+            'Yellow'
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [18, 12, 6],
+            needleValue: 15,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 205, 86, 0.7)'
+            ],
+            borderColor: [
+                '#333'
+            ],
+            borderWidth: 1,
+            cutout: "95%",
+            circumference: 180,
+            rotation: 270,
+            borderRadius: 5
+        }]
+    };
+
+    const gaugeNeedle = {
+        id: 'gaugeNeedle',
+
+        afterDatasetDraw(chart, args, options) {
+            const { ctx, config, data, chartArea: { top, bottom, left, right, width, height } } = chart;
+
+            ctx.save();
+            // console.log(ctx);
+            const needleValue = data.datasets[0].needleValue;
+            const dataTotal = data.datasets[0].data.reduce((data1, data2) => data1 + data2, 0);
+            const angle = Math.PI + (1 / dataTotal * needleValue * Math.PI);
+
+            const cx = width / 2;
+            const cy = chart._metasets[0].data[0].y;
+            // console.log(ctx.canvas.offsetHeight);
+            // console.log(height);
+
+            //needle
+            ctx.translate(cx, cy);
+            ctx.rotate(angle);
+            ctx.beginPath();
+            ctx.moveTo(0, -2);
+            ctx.lineTo(ctx.canvas.offsetHeight / 2, 0);
+            ctx.lineTo(0, 2);
+            ctx.fillStyle = '#444';
+            ctx.fill();
+
+            //needle dot
+            ctx.translate(-cx, -cy);
+            ctx.beginPath();
+            ctx.arc(cx, cy, 3, 0, 10);
+            ctx.fill();
+            ctx.restore();
+
+            //Text
+            ctx.font = '1.5em Helvetiva';
+            ctx.fillStyle = '#444';
+            ctx.fillText(Math.round(needleValue / dataTotal * 100) + '%', cx, cy + 30);
+            ctx.textAlign = 'center';
+            ctx.restore();
+        }
+    }
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    enabled: false,
+                    // displaycolors: false,
+                    // callbacks: {
+                    //     label: function (tooltip, data, value) {
+                    //         console.log(tooltip)
+                    //         return tooltip.dataset.needleValue + '%';
+                    //     }
+                    // }
+                }
+            }
+        },
+        plugins: [gaugeNeedle]
+    };
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    function NewData() {
+        console.log('test');
+        myChart.config.data.datasets[0].needleValue = Math.floor(Math.random() * 36);
+        myChart.update();
+    }
+
+</script>
