@@ -14,6 +14,7 @@ const APP1 = {
             rawHtml: '<span style="color: red">This should be red.</span>',
             firstName: "Kevin",
             lastName: "Wang",
+            todos2: [],
             todos: [
                 { text: 'Learn JavaScript' },
                 { text: 'Learn Vue' },
@@ -84,11 +85,18 @@ const APP1 = {
                 this.lastName = names[names.length - 1]
             }
         },
+        testtodo() {
+            return this.todos;
+        }
 
     },
     mounted() {
         setInterval(() => {
-            this.counter++
+            this.counter++;
+            console.log(this.groceryList.find(x => x.id == 1).text);
+            this.groceryList.find(x => x.id == 1).text = this.counter;
+
+
         }, 1000);
 
         console.log($("#test").attr("style"));
@@ -110,3 +118,9 @@ $("[statue = " + 3 + "]")
     .filter((x, i) => i.attributes["differ"].value > 11)
     .addClass("greenText")
     .removeClass("redText");
+
+setInterval(() => {
+
+    vm.todos2.push({ id: vm.counter, text: 'Vegetables' });
+    vm.todos2.find(x => x.id == 6).text = vm.counter;
+}, 1000);

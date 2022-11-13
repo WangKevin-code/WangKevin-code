@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Bootstrap Toggle CSS -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+
+    <title>My Portfolio!</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif, "微軟正黑體";
+        padding: 0;
+        margin: 0;
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .jumbotron {
+        background: url('./img/office2.jpg') no-repeat center center;
+        background-size: cover;
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <!--<h4 class="text-white">About</h4>
+              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+              -->
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><span class="text-white">Name : 王玟翔</span></li>
+                            <li><span class="text-white">Cellphone : 0916486385</span></li>
+                            <li><span class="text-white">Email : kevin22413180@gmail.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
+            <div class="container d-flex justify-content-between">
+                <a href="./index.html" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                        viewBox="0 0 24 24" focusable="false">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                        <circle cx="12" cy="13" r="4" />
+                    </svg>
+                    <strong>Home</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        <div class="album py-5 bg-light">
+            <div class="container mt-3">
+                <div class="row-cols-1">
+                    <div class="chartContainer bg-secondary "></div>
+                </div>
+
+                <div class="row-cols-1">
+                    <div class="zoom1 bg-info"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Name : 王玟翔</p>
+            <p>Cell phone : 0916486385</p>
+            <p>Email : kevin22413180@gmail.com</p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+<!-- Vue CDN -->
+<script src="https://unpkg.com/vue@next"></script>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+    //js
+    // 資料
+    const data = [
+        { name: 'A', x: 200, y: 340 },
+        { name: 'B', x: 220, y: 300 },
+        { name: 'C', x: 250, y: 198 },
+        { name: 'D', x: 360, y: 296 },
+        { name: 'E', x: 160, y: 150 },
+        { name: 'F', x: 370, y: 360 },
+        { name: 'G', x: 187, y: 250 }
+    ];
+
+    const svg = d3.select('.chartContainer')
+        .append('svg')
+        .attr('width', '100%')
+        .attr('height', 500);
+
+    // 建立圓點
+    const dots = svg.append('g')
+        .style("fill", "#19d3a2")
+        .style("fill-opacity", 0.3)
+        .attr("stroke", "#b3a2c8")
+        .style("stroke-width", 4)
+        .style('cursor', 'pointer')
+        .selectAll('circle')
+        .data(data)
+        .enter()
+        .append('circle')
+        .attr('r', 25)
+        .attr('cx', d => d.x)
+        .attr('cy', d => d.y);
+
+    // 建立拖曳方法
+    const drag = d3.drag()
+        .on('start', function () {
+            d3.select(this)
+                .style('stroke', 'blue')
+        })
+        .on('drag', function () {
+            let pt = d3.pointer(event, this)
+            d3.select(this)
+                .attr('cx', pt[0])
+                .attr('cy', pt[1])
+        })
+        .on('end', function () {
+            d3.select(this)
+                .style('stroke', '#b3a2c8')
+        });
+
+    dots.call(drag);
+    ///////////////////////////////////////////////////
+    // js
+
+    const svg2 = d3.select('.zoom1')
+        .append('svg')
+        .attr('width', '100%')
+        .attr('height', 500);
+
+    // 加img
+    const img = svg2.append("svg:image")
+        .attr('x', 0) //x座標
+        .attr('y', 0) //y座標
+        .attr('width', '100%') //指定圖片寬度
+        .attr('height', '100%') //指定圖片長度
+        .attr("xlink:href", "/img/temperature.jpg") //圖片路徑與檔名
+
+    // 加個圓點點
+    const circle = svg2.append('circle')
+        .attr("id", "dot")
+        .attr("cx", 200)
+        .attr("cy", 150)
+        .attr("r", 40)
+        .attr("z-index", 10)
+        .attr("fill", "#c73ff0");
+
+
+    // Zoom 事件
+    const zoom = d3.zoom()
+        .extent([[0, 0], [250, 250]])
+        // 限制縮放大小範圍
+        .scaleExtent([0, 5])
+        // 設定雙擊的動畫時長
+        .duration(600)
+        // 用 on 來監聽縮放事件啟動後，要進行什麼動作
+        .on('zoom', function (event) {
+            //這邊決定要放大誰，我想放大circle
+            circle.attr('transform', event.transform);
+            img.attr('transform', event.transform);
+            console.log(123);
+        });
+
+    // 用 selection.call 呼叫 zoom 方法
+    svg2.call(zoom)
+</script>
