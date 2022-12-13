@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="APP">
+        <p>{{data}}</p>
+    </div>
+</body>
+
+</html>
+<!-- Vue CDN -->
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const APP = {
+        setup() {
+            let data = "Vue composition test.";
+            let weatherData = [];
+            return {
+                data,
+                weatherData
+            }
+        }
+    };
+    const vueApp = Vue.createApp(APP).mount('#APP');
+
+
+</script>

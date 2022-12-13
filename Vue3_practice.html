@@ -156,6 +156,12 @@
                     <div class="redText" statue="3" differ="16">123</div>
                     <div class="redText" statue="3" differ="17">123</div>
                     <div class="redText" statue="3" differ="18">123</div>
+                    <div>
+                        <svg height="210" width="400">
+                            <circle v-for="data in testforobject" :cx="data.point.x * counter" :cy="data.point.y" r="5"
+                                :stroke="data.stroke" :stroke-width="data.width" fill="red" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 

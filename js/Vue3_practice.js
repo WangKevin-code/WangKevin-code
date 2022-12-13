@@ -32,7 +32,39 @@ const APP1 = {
                     'Vue 3 - Basic Guide',
                     'Vue 4 - The Mystery'
                 ]
-            }
+            },
+            testforobject: [
+                {
+                    point: {
+                        x: 11,
+                        y: 12
+                    },
+                    id: "test1",
+                    text: 'Learn JavaScript',
+                    stroke: "red",
+                    width: 3
+                },
+                {
+                    point: {
+                        x: 21,
+                        y: 22
+                    },
+                    id: "test2",
+                    text: 'Learn JavaScript',
+                    stroke: "blue",
+                    width: 3
+                },
+                {
+                    point: {
+                        x: 31,
+                        y: 32
+                    },
+                    id: "test3",
+                    text: 'Learn JavaScript',
+                    stroke: "black",
+                    width: 3
+                }
+            ]
         }
     },
     methods: {
@@ -119,8 +151,8 @@ $("[statue = " + 3 + "]")
     .addClass("greenText")
     .removeClass("redText");
 
-setInterval(() => {
+// setInterval(() => {
 
-    vm.todos2.push({ id: vm.counter, text: 'Vegetables' });
-    vm.todos2.find(x => x.id == 6).text = vm.counter;
-}, 1000);
+//     vm.todos2.push({ id: vm.counter, text: 'Vegetables' });
+//     vm.todos2.find(x => x.id == 6).text = vm.counter;
+// }, 1000);
