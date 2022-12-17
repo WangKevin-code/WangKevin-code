@@ -173,19 +173,28 @@
         .on('start', function () {
             d3.select(this)
                 .style('stroke', 'blue')
+            console.log(123)
         })
         .on('drag', function () {
+            //有支援 touch 座標
+            let pts = d3.pointers(event, this)
+            console.log(pts)
+            //只有單一事件座標
             let pt = d3.pointer(event, this)
+            console.log(pt)
             d3.select(this)
-                .attr('cx', pt[0])
-                .attr('cy', pt[1])
+                .attr('cx', pts[0][0])
+                .attr('cy', pts[0][1])
         })
         .on('end', function () {
             d3.select(this)
                 .style('stroke', '#b3a2c8')
-        });
+            console.log(456)
+        })
+        .touchable(true);
 
     dots.call(drag);
+
     ///////////////////////////////////////////////////
     // js
 
