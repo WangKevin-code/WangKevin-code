@@ -212,14 +212,32 @@
             ctx.restore();
         }
     }
-
+    const test = Chart.controllers.doughnut.overrides.plugins.legend.onClick;
     const config = {
         type: 'doughnut',
         data: data,
         options: {
             plugins: {
                 legend: {
-                    display: false
+                    display: true,
+
+                    // labels: {
+                    //     usePointStyle: true,
+                    //     pointStyle: "circle",
+                    //     // generateLabels: (chart) => {
+                    //     //     return chart.data.labels.map((label, index) => ({
+                    //     //         text: label,
+                    //     //         test: 1
+                    //     //     }));
+                    //     // },
+                    // },
+
+                    onClick: function (event, legendItem, legend) {
+                        console.log(event, legendItem, legend);
+                        Chart.controllers.doughnut.overrides.plugins.legend.onClick(event, legendItem, legend)
+                        // legend.chart.hide(0, 1);
+                        // legend.chart.update();
+                    }
                 },
                 tooltip: {
                     enabled: false,
