@@ -129,7 +129,10 @@
     <script
         src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.0.0/chartjs-plugin-zoom.min.js"
+        integrity="sha512-B6F98QATBNaDHSE7uANGo5h0mU6fhKCUD+SPAY7KZDxE8QgZw9rewDtNiu3mbbutYDWOKT3SPYD8qDBpG2QnEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
@@ -141,30 +144,51 @@
             label: 'Weekly Sales',
             data: [
                 { x: ['2023-01-10', '2023-01-14'], y: 'Task1', name: 'James', status: 'Completed' },
-                { x: ['2023-01-05', '2023-01-06'], y: 'Task6', name: 'Peter', status: 'Completed' },
                 { x: ['2023-01-10', '2023-01-14'], y: 'Task2', name: 'Ken', status: 'Completed' },
                 { x: ['2023-01-11', '2023-01-18'], y: 'Task3', name: 'Kevin', status: 'Delayed' },
                 { x: ['2023-01-20', '2023-01-22'], y: 'Task4', name: 'Sin', status: 'Completed' },
-                { x: ['2023-01-03', '2023-01-21'], y: 'Task5', name: 'Amy', status: 'Pending' },
+                { x: ['2023-02-19', '2023-02-20'], y: 'Task5', name: 'Amy', status: 'Pending' },
+                { x: ['2023-01-05', '2023-01-06'], y: 'Task6', name: 'Peter', status: 'Completed' },
+                { x: ['2023-01-05', '2023-01-07'], y: 'Task7', name: 'Peter', status: 'test' },
             ],
-            backgroundColor: [
-                'rgba(255, 26, 104, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(0, 0, 0, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 26, 104, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(0, 0, 0, 1)'
-            ],
+            backgroundColor: color => {
+                let result = "";
+                switch (color.raw.status) {
+                    case 'Completed':
+                        result = "rgba(137, 204, 120, 0.5)";
+                        break;
+                    case 'Delayed':
+                        result = "rgba(232, 76, 56, 0.5)";
+                        break;
+                    case 'Pending':
+                        result = "rgba(252, 186, 3, 0.5)";
+                        break;
+                    default:
+                        result = "rgba(87, 85, 80, 0.5)";
+                        break;
+
+                }
+                return result;
+            },
+            borderColor: color => {
+                let result = "";
+                switch (color.raw.status) {
+                    case 'Completed':
+                        result = "rgba(137, 204, 120, 1)";
+                        break;
+                    case 'Delayed':
+                        result = "rgba(232, 76, 56, 1)";
+                        break;
+                    case 'Pending':
+                        result = "rgba(252, 186, 3, 1)";
+                        break;
+                    default:
+                        result = "rgba(87, 85, 80, 1)";
+                        break;
+
+                }
+                return result;
+            },
             borderWidth: 1,
             borderSkipped: false,
             borderRadius: 5,
@@ -207,7 +231,7 @@
         }
     }
 
-    //assignedTasks plugin block 
+    //status plugin block 
     const status = {
         id: 'status',
         afterDatasetsDraw(chart, args, pluginOptions) {
@@ -223,6 +247,50 @@
             ctx.restore();
         }
     }
+
+    //weekend plugin block
+    const weekend = {
+        id: 'weekend',
+        beforeDatasetsDraw(chart, args, pluginOptions) {
+            const { ctx, data, chartArea: { top, bottom, left, right, width, height }, scales: { x, y } } = chart;
+            ctx.save();
+
+            x.ticks.forEach((tick, index) => {
+                let day = new Date(tick.value).getDay();
+                if (day === 6 || day === 0) {
+                    ctx.fillStyle = pluginOptions.weekendColor;
+                    ctx.fillRect(x.getPixelForValue(tick.value), top, x.getPixelForValue(new Date(tick.value).setHours(24)) - x.getPixelForValue(tick.value), height);
+                }
+            });
+        }
+    }
+
+    //chartjs zoom option
+    const zoomOptions = {
+        // limits: {
+        //     x: { min: -200, max: 200, minRange: 50 },
+        //     y: { min: -200, max: 200, minRange: 50 }
+        // },
+        pan: {
+            enabled: true,
+            mode: 'x',
+        },
+        zoom: {
+            wheel: {
+                enabled: true,
+            },
+            pinch: {
+                enabled: true
+            },
+            mode: 'x',
+            onZoomComplete({ chart }) {
+                // This update is needed to display up to date zoom level in the title.
+                // Without this, previous zoom level is displayed.
+                // The reason is: title uses the same beforeUpdate hook, and is evaluated before zoom.
+                chart.update('none');
+            }
+        }
+    };
 
     // config 
     const config = {
@@ -246,15 +314,24 @@
                     },
                     min: '2023-01-01',
                     max: '2023-01-31',
+                },
+                y: {
+                    min: 0,
+                    max: 6,
+                    labels: ['Task1', 'Task2', 'Task3', 'Task4', 'Task5', 'Task6', 'Task7']
                 }
             },
             plugins: {
+                weekend: {
+                    weekendColor: "rgba(102, 102, 102, 0.2)"
+                },
                 legend: {
                     display: false
-                }
+                },
+                zoom: zoomOptions
             }
         },
-        plugins: [todayLine, assignedTasks, status]
+        plugins: [todayLine, assignedTasks, status, weekend]
     };
 
     // render init block
