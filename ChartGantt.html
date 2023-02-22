@@ -210,7 +210,26 @@
             ctx.moveTo(x.getPixelForValue(new Date()), top);
             ctx.lineTo(x.getPixelForValue(new Date()), bottom);
             ctx.stroke();
+
             ctx.setLineDash([]);
+
+            ctx.beginPath();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(255, 159, 64, 1)';
+            ctx.fillStyle = 'rgba(255, 159, 64, 1)';
+            ctx.moveTo(x.getPixelForValue(new Date()), top + 3);
+            ctx.lineTo(x.getPixelForValue(new Date()) - 6, top - 6);
+            ctx.lineTo(x.getPixelForValue(new Date()) + 6, top - 6);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
+            ctx.restore();
+
+            ctx.font = 'bold 12px sans-serif';
+            ctx.fillStyle = 'rgba(255, 159, 64, 1)';
+            ctx.textAlign = 'center';
+            ctx.fillText("Today", x.getPixelForValue(new Date()), top + 12);
+            ctx.restore();
         }
     }
 
@@ -273,7 +292,7 @@
         // },
         pan: {
             enabled: true,
-            mode: 'x',
+            mode: 'xy',
         },
         zoom: {
             wheel: {
@@ -282,7 +301,7 @@
             pinch: {
                 enabled: true
             },
-            mode: 'x',
+            mode: 'xy',
             onZoomComplete({ chart }) {
                 // This update is needed to display up to date zoom level in the title.
                 // Without this, previous zoom level is displayed.
