@@ -193,6 +193,60 @@
             borderSkipped: false,
             borderRadius: 5,
             barPercentage: 0.8,
+        },
+        {
+            label: 'Weekly Sales2',
+            data: [
+                { x: ['2023-01-10', '2023-01-14'], y: 'Task1', name: 'James', status: 'Completed' },
+                { x: ['2023-01-10', '2023-01-14'], y: 'Task2', name: 'Ken', status: 'Completed' },
+                { x: ['2023-01-11', '2023-01-18'], y: 'Task3', name: 'Kevin', status: 'Delayed' },
+                { x: ['2023-01-20', '2023-01-22'], y: 'Task4', name: 'Sin', status: 'Completed' },
+                { x: ['2023-02-19', '2023-02-20'], y: 'Task5', name: 'Amy', status: 'Pending' },
+                { x: ['2023-01-05', '2023-01-06'], y: 'Task6', name: 'Peter', status: 'Completed' },
+                { x: ['2023-01-05', '2023-01-07'], y: 'Task7', name: 'Peter', status: 'test' },
+            ],
+            backgroundColor: color => {
+                let result = "";
+                switch (color.raw.status) {
+                    case 'Completed':
+                        result = "rgba(137, 204, 120, 0.5)";
+                        break;
+                    case 'Delayed':
+                        result = "rgba(232, 76, 56, 0.5)";
+                        break;
+                    case 'Pending':
+                        result = "rgba(252, 186, 3, 0.5)";
+                        break;
+                    default:
+                        result = "rgba(87, 85, 80, 0.5)";
+                        break;
+
+                }
+                return result;
+            },
+            borderColor: color => {
+                let result = "";
+                switch (color.raw.status) {
+                    case 'Completed':
+                        result = "rgba(137, 204, 120, 1)";
+                        break;
+                    case 'Delayed':
+                        result = "rgba(232, 76, 56, 1)";
+                        break;
+                    case 'Pending':
+                        result = "rgba(252, 186, 3, 1)";
+                        break;
+                    default:
+                        result = "rgba(87, 85, 80, 1)";
+                        break;
+
+                }
+                return result;
+            },
+            borderWidth: 1,
+            borderSkipped: false,
+            borderRadius: 5,
+            barPercentage: 0.8,
         }]
     };
 
@@ -345,7 +399,7 @@
                     weekendColor: "rgba(102, 102, 102, 0.2)"
                 },
                 legend: {
-                    display: false
+                    display: true
                 },
                 zoom: zoomOptions
             }
