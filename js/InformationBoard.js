@@ -73,6 +73,6 @@ const VueApp = {
 }
 
 //Global paramter setting for axios
-axios.defaults.baseURL = 'https://opendata.cwb.gov.tw';
+axios.defaults.baseURL = 'https://opendata.cwa.gov.tw';
 
 const vm = Vue.createApp(VueApp).mount('#InfoBoards');
